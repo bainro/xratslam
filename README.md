@@ -1,18 +1,14 @@
-# libxratslam
-An extensible RatSlam C++ library.
+RatSlam C++ library.
 
 The xRatSLam library implements the Simultaneous Location and Mapping (SLAM) algorithm
-called RatSlam inspired by neural rodents knowing dynamics while performing
-self localization tasks.
+called RatSlam inspired by neural rodents knowing dynamics while performing self localization tasks.
 
-This is a simple readme file to remember basic usage.  
-If you have questions, mail me: mesmunoz@gmail.com
+Original code from Muñoz et al. (2022)
 
-
-## Note
-
-Current code works only under Unix based systems.
-
+## Requirements
+- Unix OS
+- OpenCV
+- Boost
 
 ## Building and installing
 
