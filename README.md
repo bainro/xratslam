@@ -12,9 +12,9 @@ Original code from Muñoz et al. (2022)
 
 ## Building and installing
 
+> $ mkdir build
 > $ cd libxratslam/build  
 > $ cmake .. && make install  
-
 
 ## How to use
 
@@ -33,9 +33,6 @@ and
 > ${XRATSLAM_LIBRARIES}  
 > ...  
 > )   
-
-See https://github.com/mesmu/xratslam-example for a practical example.
-
 
 ## Insertion of a new LocalView, PoseCell or ExperienceMap implementation
   
