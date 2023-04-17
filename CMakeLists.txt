@@ -140,7 +140,7 @@ install(
   )
 
 add_executable(test
-  test.hh
+  test.cc
 )
 
 ## External libraries.
