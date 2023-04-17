@@ -141,11 +141,6 @@ install(
   )
 
 
-## External libraries.
-#
-target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
-target_link_libraries( xratslam ${Boost_LIBRARIES}    )
-
 find_package( PkgConfig REQUIRED )
 pkg_check_modules( XRATSLAM REQUIRED xratslam )
 
@@ -153,7 +148,11 @@ add_executable(test
   test.cc
 )
 
-target_link_libraries( test ${OpenCV_LIBRARIES}   )
+## External libraries.
+#
+target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
+target_link_libraries( xratslam ${Boost_LIBRARIES}    )
+
 target_link_libraries( test xratslam)
 
 
