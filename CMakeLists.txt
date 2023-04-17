@@ -149,4 +149,4 @@ pkg_check_modules( XRATSLAM REQUIRED xratslam )
 #
 target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
 target_link_libraries( xratslam ${Boost_LIBRARIES}    )
-target_link_libraries( test xratslam)
+# target_link_libraries( test xratslam)
