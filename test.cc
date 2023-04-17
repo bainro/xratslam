@@ -1,8 +1,8 @@
 #include<iostream>
 #include <xratslam/XRatSlam.hh>
 
-// # using namespace std;
-// # using namespace xratslam;
+using namespace std;
+using namespace xratslam;
 
 int main()
 {
