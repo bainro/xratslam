@@ -141,11 +141,12 @@ install(
 
 add_executable(test
   test.cc
+  xratslam
 )
 
 ## External libraries.
 #
 target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
 target_link_libraries( xratslam ${Boost_LIBRARIES}    )
-target_link_libraries( test ${xratslam_LIBRARIES}    )
+target_link_libraries( test xratslam)
 target_link_libraries( test ${XRATSLAM_LIBRARIES}    )
