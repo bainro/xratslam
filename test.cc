@@ -6,6 +6,8 @@ using namespace xratslam;
 
 int main()
 {
-    std::cout << "Hello World!";
+    cout << "Hello World!";
+    string configFile = "";
+    XRatSLAM("");
     return 0;
 }
