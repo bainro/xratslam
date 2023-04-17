@@ -146,39 +146,6 @@ pkg_check_modules( XRATSLAM REQUIRED xratslam )
 
 add_executable(test
   test.cc
-  src/ratslam/visual_odometry.cpp
-  src/ratslam/local_view_match.cpp
-  src/ratslam/posecell_network.cpp
-  src/ratslam/experience_map.cpp
-  src/xratslam/Helper.cc
-  src/xratslam/Settings.cc
-  src/xratslam/Utils.cc
-  src/xratslam/DataReader.cc
-  src/xratslam/DataReaderDir.cc
-  src/xratslam/DataReaderVideo.cc
-  src/xratslam/Image.cc
-  src/xratslam/Odometry.cc
-  src/xratslam/FileOdometry.cc
-  src/xratslam/XVisualOdometry.cc
-  src/xratslam/Factory.cc
-  src/xratslam/localview/VisualTemplate.cc
-  src/xratslam/localview/VisualTemplateSet.cc
-  src/xratslam/localview/OriginalLV.cc
-  src/xratslam/localview/RecodedLV.cc
-  src/xratslam/posecell/PcTemplate.cc
-  src/xratslam/posecell/OriginalPC.cc
-  src/xratslam/posecell/RecodedPC.cc
-  src/xratslam/posecell/NoCanPC.cc
-  src/xratslam/Experience.cc
-  src/xratslam/ExperienceSet.cc
-  src/xratslam/ExpLink.cc
-  src/xratslam/ExpLinkSet.cc
-  src/xratslam/DataEM.cc
-  src/xratslam/experiencemap/OriginalEM.cc
-  src/xratslam/experiencemap/RecodedEM.cc
-  src/xratslam/Log.cc
-  src/xratslam/TimeLogger.cc
-  src/xratslam/XRatSlam.cc
 )
 
 ## External libraries.
