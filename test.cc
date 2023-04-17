@@ -1,6 +1,5 @@
 #include<iostream>
-// #include<xratslam/XRatSlam.hh>
-#include<xratslam>
+#include<xratslam/XRatSlam.hh>
 
 using namespace std;
 
@@ -8,6 +7,7 @@ int main()
 {
     cout << "Hello World!";
     string configFile = "";
-    xratslam::XRatSlam("");
+    XRatSlam slam = xratslam::XRatSlam("");
+    slam::start();
     return 0;
 }
