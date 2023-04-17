@@ -9,7 +9,7 @@
  */
 #include <xratslam/DataReaderVideo.hh>
 
-#include "xratslam/Utils.hh"
+#include <xratslam/Utils.hh>
 #include <xratslam/Image.hh>
 #include <xratslam/Odometry.hh>
 
