@@ -139,6 +139,10 @@ install(
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig
   )
 
+add_executable(test
+  test.cc
+)
+
 ## External libraries.
 #
 target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
