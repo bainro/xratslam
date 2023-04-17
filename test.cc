@@ -1,12 +1,11 @@
 #include<iostream>
 
 using namespace std;
-using namespace xratslam;
 
 int main()
 {
     cout << "Hello World!";
     string configFile = "";
-    XRatSlam("");
+    xratslam::XRatSlam("");
     return 0;
 }
