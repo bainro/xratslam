@@ -6,9 +6,9 @@ using namespace xratslam;
 
 int main()
 {
-    cout << "Hello World!";
+    cout << "Hello World!" << endl;
     string configFile = "";
     XRatSlam slam(configFile);
-    slam.start();
+    cout << slam.start() << endl;
     return 0;
 }
