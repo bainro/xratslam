@@ -139,6 +139,9 @@ install(
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig
   )
 
+add_executable(test
+  test.hh
+)
 
 ## External libraries.
 #
