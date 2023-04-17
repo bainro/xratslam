@@ -141,7 +141,7 @@ install(
 
 add_executable(test
   test.cc
-  xratslam
+  src/xratslam/XRatSlam.cc
 )
 
 ## External libraries.
