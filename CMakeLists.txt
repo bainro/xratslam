@@ -174,6 +174,7 @@ add_executable(test
   src/xratslam/FileOdometry.cc
   src/xratslam/XVisualOdometry.cc
   src/xratslam/Factory.cc
+  src/xratslam/Template.hh
   src/xratslam/localview/VisualTemplate.cc
   src/xratslam/localview/VisualTemplateSet.cc
   src/xratslam/localview/OriginalLV.cc
