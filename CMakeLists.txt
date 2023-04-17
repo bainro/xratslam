@@ -31,6 +31,10 @@ include_directories( xratslam ${Boost_INCLUDE_DIRS} )
 ##
 include( GNUInstallDirs )
 
+add_executable(test
+  test.cc
+  src/xratslam/XRatSlam.cc
+)
 
 ## Library code files.
 ##
@@ -138,11 +142,6 @@ install(
   FILES       ${CMAKE_BINARY_DIR}/xratslam.pc
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig
   )
-
-add_executable(test
-  test.cc
-  src/xratslam/XRatSlam.cc
-)
 
 ## External libraries.
 #
