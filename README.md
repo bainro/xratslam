@@ -12,9 +12,10 @@ Original code from Muñoz et al. (2022)
 
 ## Building and installing
 
-> $ mkdir build
-> $ cd libxratslam/build  
-> $ cmake .. && make install  
+> $ mkdir build  
+> $ cd build  
+> $ cmake ..  
+> $ sudo make install # try no sudo first
 
 ## How to use
 
