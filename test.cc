@@ -1,5 +1,5 @@
 #include<iostream>
-#include<xratslam/XRatSlam.hh>
+#include<ratslam/LocalViewScene.hh>
 
 using namespace std;
 
