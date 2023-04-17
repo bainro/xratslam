@@ -147,4 +147,4 @@ add_executable(test
 #
 target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
 target_link_libraries( xratslam ${Boost_LIBRARIES}    )
-target_link_libraries( test ${XRATSLAM_LIBRARIES}    )
+target_link_libraries( test ${xratslam_LIBRARIES}    )
