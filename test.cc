@@ -1,5 +1,5 @@
 #include<iostream>
-#include<xratslam>
+#include<XRatSlam.hh>
 
 using namespace std;
 
