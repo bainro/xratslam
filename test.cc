@@ -8,7 +8,7 @@ int main()
 {
     cout << "Hello World!";
     string configFile = "";
-    XRatSlam slam = XRatSlam("");
+    XRatSlam slam(configFile);
     slam::start();
     return 0;
 }
