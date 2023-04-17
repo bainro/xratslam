@@ -140,64 +140,11 @@ install(
 
 add_executable(test
   test.cc
-  src/xratslam/XRatSlam.cc
-  src/xratslam/Helper.hh
-  src/xratslam/Settings.hh
-  src/xratslam/Image.hh
-  src/xratslam/Odometry.hh
-  src/xratslam/OdometryReader.hh
-  src/xratslam/DataReader.hh
-  src/xratslam/DataReaderDir.hh
-  src/xratslam/DataReaderVideo.hh
-  src/xratslam/Chronometer.hh
-  src/xratslam/TimeLogger.hh
-  src/xratslam/Experience.hh
-  src/xratslam/ExperienceSet.hh
-  src/xratslam/ExpLink.hh
-  src/xratslam/ExpLinkSet.hh
-  src/xratslam/DataEM.hh
-  src/xratslam/XRatSlam.hh
-  src/xratslam/LocalView.hh
-  src/xratslam/ExperienceMap.hh
-  src/ratslam/visual_odometry.cpp
-  src/ratslam/local_view_match.cpp
-  src/ratslam/posecell_network.cpp
-  src/ratslam/experience_map.cpp
-  src/xratslam/Helper.cc
-  src/xratslam/Settings.cc
-  src/xratslam/Utils.cc
-  src/xratslam/DataReader.cc
-  src/xratslam/DataReaderDir.cc
-  src/xratslam/DataReaderVideo.cc
-  src/xratslam/Image.cc
-  src/xratslam/Odometry.cc
-  src/xratslam/FileOdometry.cc
-  src/xratslam/XVisualOdometry.cc
-  src/xratslam/Factory.cc
-  src/xratslam/Template.hh
-  src/xratslam/localview/VisualTemplate.cc
-  src/xratslam/localview/VisualTemplateSet.cc
-  src/xratslam/localview/OriginalLV.cc
-  src/xratslam/localview/RecodedLV.cc
-  src/xratslam/posecell/PcTemplate.cc
-  src/xratslam/posecell/OriginalPC.cc
-  src/xratslam/posecell/RecodedPC.cc
-  src/xratslam/posecell/NoCanPC.cc
-  src/xratslam/Experience.cc
-  src/xratslam/ExperienceSet.cc
-  src/xratslam/ExpLink.cc
-  src/xratslam/ExpLinkSet.cc
-  src/xratslam/DataEM.cc
-  src/xratslam/experiencemap/OriginalEM.cc
-  src/xratslam/experiencemap/RecodedEM.cc
-  src/xratslam/Log.cc
-  src/xratslam/TimeLogger.cc
-  src/xratslam/XRatSlam.cc
 )
 
 ## External libraries.
 #
 target_link_libraries( xratslam ${OpenCV_LIBRARIES}   )
 target_link_libraries( xratslam ${Boost_LIBRARIES}    )
-target_link_libraries( test xratslam)
-target_link_libraries( test ${XRATSLAM_LIBRARIES}    )
+# target_link_libraries( test xratslam)
+# target_link_libraries( test ${XRATSLAM_LIBRARIES}    )
