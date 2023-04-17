@@ -39,7 +39,7 @@ namespace xratslam
     { clear(); }
 
 
-    /** Return true is queue is empty.
+    /** Return true if queue is empty.
      */
     bool empty()
     {
