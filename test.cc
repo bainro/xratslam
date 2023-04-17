@@ -8,6 +8,6 @@ int main()
 {
     cout << "Hello World!";
     string configFile = "";
-    XRatSLAM("");
+    XRatSlam("");
     return 0;
 }
