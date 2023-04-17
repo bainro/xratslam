@@ -22,6 +22,8 @@ set (CMAKE_CXX_STANDARD 11)
 # OpenCV
 find_package( OpenCV REQUIRED )
 include_directories( xratslam ${OpenCV_INCLUDE_DIRS} )
+include_directories( test ${OpenCV_INCLUDE_DIRS} )
+
 
 # Boost
 find_package( Boost REQUIRED COMPONENTS system filesystem serialization)
@@ -151,6 +153,7 @@ add_executable(test
   test.cc
 )
 
+target_link_libraries( test ${OpenCV_LIBRARIES}   )
 target_link_libraries( test xratslam)
 
 
