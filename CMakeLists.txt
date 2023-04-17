@@ -138,6 +138,9 @@ install(
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig
   )
 
+find_package( PkgConfig REQUIRED )
+pkg_check_modules( XRATSLAM REQUIRED xratslam )
+
 add_executable(test
   test.cc
 )
