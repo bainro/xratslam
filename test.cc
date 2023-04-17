@@ -9,6 +9,6 @@ int main()
     cout << "Hello World!";
     string configFile = "";
     XRatSlam slam(configFile);
-    slam::start();
+    slam.start();
     return 0;
 }
