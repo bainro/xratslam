@@ -139,17 +139,16 @@ DataReader::readNext( Image **image, Odometry **odometry )
       // Read image before odometry.
       if ( _isVisual )
       {
+        cout << "HI4" << endl;
         if ( ! (*image = readNextImage( _imageSeq++ )) )
           throw string( "image ERROR-1" );
         if ( ! (*odometry = _odometryReader->getNext( *image )) )
           throw string( "odometry ERROR-1" );
       }
-
-      cout << "HI4" << endl;
-      
       // Read odometry before image.
       else
       {
+        cout << "HI4.5" << endl;
         if ( ! (*odometry = _odometryReader->getNext()) )
           throw string( "odometry ERROR-2" );
         if ( ! (*image = readNextImage( (*odometry)->seq )) )
