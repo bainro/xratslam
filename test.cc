@@ -30,7 +30,7 @@ int main()
             cout << "Frame #" << count << " done!" << endl;
             // Image *img_copy(img);
             // (*img_copy).show("OpenCV window", 10);
-            *img.show("OpenCV window", 10);
+            (*img).show("OpenCV window", 10);
         }    
     }
     cout << "FINISHED!" << endl;
