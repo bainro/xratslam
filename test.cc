@@ -19,9 +19,9 @@ int main()
     cout << 234 << endl;
     Image **img;
     Odometry **odo;
-    vid.readNext(img, odo);
     cout << 345 << endl;
-    cout << slam.feed(*img, *odo);
+    vid.readNext(img, odo);
     cout << 456 << endl;
+    cout << slam.feed(*img, *odo);
     return 0;
 }
