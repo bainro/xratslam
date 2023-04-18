@@ -128,13 +128,9 @@ DataReader::readNext( Image **image, Odometry **odometry )
     // images are stored as a sequence of images, the odometry count
     // indicates what image should be read.
     //
-
-    cout << "HI :(" << endl;
     
     *odometry = 0;
     *image    = 0;
-    
-    cout << "HI :)" << endl;
     
     try
     {
