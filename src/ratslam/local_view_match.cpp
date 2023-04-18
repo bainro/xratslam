@@ -370,8 +370,10 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
 				  cdiff += abs(*column_ptr - *template_ptr);
 			  }
 			  // fast breaks
-			  if (cdiff > mindiff)
+			  if (cdiff > mindiff) {
+                                  cout << "BREAK" << endl;	  
 				  break;
+			  }
 		  }
           
 		  if (cdiff < mindiff) {
