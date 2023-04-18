@@ -108,7 +108,7 @@ void LocalViewMatch::on_image( const unsigned char *view_rgb,
   unsigned int vt_match_id;
   compare(vt_error, vt_match_id);
 
-  cout << vt_error << endl;
+  cout << vt_match_id << endl;
 	
   if (vt_error <= VT_MATCH_THRESHOLD)
   {
