@@ -325,7 +325,7 @@ XRatSlam::saveState( int iteration, bool lv, bool pc, bool em )
   stop();
 
   // Save some extra information in a "info.txt" file.
-  saveInfo( iterationDir );
+  // saveInfo( iterationDir );
   
   // Save modules state.
   if ( lv ) saveStateLV( _experimentDir, iterationDir, iteration );
