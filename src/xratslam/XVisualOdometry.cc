@@ -82,7 +82,7 @@ XVisualOdometry::getNext( Image *image )
   odometry->dAngle    = vAng;
   odometry->dTime     = (_lastTime > 0 ? image->time - _lastTime : 0.0);
 
-  // Gambiarra
+  // jury-rigged
   if ( image->time < 1e-8 )
     odometry->dTime = 1.0 / _visualOdometry->getCameraHz();
     
