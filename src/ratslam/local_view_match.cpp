@@ -346,7 +346,6 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
 	
   BOOST_FOREACH(vt, templates) {
       if (abs(current_mean - vt.mean) > VT_MATCH_THRESHOLD + epsilon) {
-	      cout << "dbg" << endl;
 	      continue;
 	  }
 
@@ -355,7 +354,6 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
       // handles 2d images shifting only in the x direction
       // note I haven't tested on a 1d yet.
 	  for (offset = 0; offset < VT_SHIFT_MATCH*2+1; offset += VT_STEP_MATCH) {
-	      cout << "offset: " << offset << endl;
 	      cdiff = 0;
 	      template_start_ptr = &vt.data[0] + offset;
 	      column_start_ptr = &data[0] + VT_SHIFT_MATCH;
