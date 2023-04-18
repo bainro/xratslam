@@ -111,23 +111,11 @@ void LocalViewMatch::on_image( const unsigned char *view_rgb,
   if (vt_error <= VT_MATCH_THRESHOLD)
   {
     set_current_vt((int)vt_match_id);
-
-    /*
-    // Mesmu
-    cout << "VTM[" << setw(4) << get_current_vt() << "] " << endl;
-    cout.flush();
-    */
   }
   else
   {
     vt_relative_rad = 0;
     set_current_vt(create_template());
-
-    // Mesmu
-    /*
-    cout << "VTN[" << setw(4) << get_current_vt() << "] " << endl;
-    cout.flush();
-    */
   }
 
 }
