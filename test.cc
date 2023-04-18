@@ -26,7 +26,7 @@ int main()
         if (img == 0) break;
         
         count++;
-        if (count%100 == 0) {
+        if (count%1000 == 0) {
             cout << "Frame #" << count << " done!" << endl;
             // Image *img_copy(img);
             // (*img_copy).show("OpenCV window", 10);
