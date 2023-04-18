@@ -23,14 +23,15 @@ int main()
     while (true) {
         slam.feed(img, odo);
         vid.readNext(&img, &odo);
+        if (img == 0) break;
         
         count++;
         if (count%100 == 0) {
             cout << "Frame #" << count << " done!" << endl;
-            Image *img_copy(img);
-            (*img_copy).show("OpenCV window", 10);
+            // Image *img_copy(img);
+            // (*img_copy).show("OpenCV window", 10);
+            *img.show("OpenCV window", 10);
         }    
-        if (img == 0) break;
     }
     cout << "FINISHED!" << endl;
     return 0;
