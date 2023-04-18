@@ -138,6 +138,8 @@ DataReader::readNext( Image **image, Odometry **odometry )
     *odometry = 0;
     *image    = 0;
     
+    cout << "HI3.33" << endl;
+    
     try
     {
       // Read image before odometry.
