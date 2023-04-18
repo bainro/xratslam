@@ -12,7 +12,8 @@ int main()
     cout << "Hello World!" << endl;
     string configFile = "";
     XRatSlam slam(configFile);
-    cout << slam.start() << endl;
+    cout << "starting slam!" << endl;
+    slam.start();
     DataReaderVideo vid("./test.mp4");
     vid.setOdometryVisual(configFile);
     Image *img;
