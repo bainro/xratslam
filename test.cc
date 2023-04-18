@@ -20,7 +20,7 @@ int main()
     Odometry *odo;
     vid.readNext(&img, &odo);
     int count = 0;
-    while (img != 0) {
+    while (*img != 0) {
         slam.feed(img, odo);
         vid.readNext(&img, &odo);
         count++;
