@@ -323,7 +323,9 @@ int LocalViewMatch::create_template()
     new_template->data.push_back(*(data_ptr++));
 
   new_template->mean = current_mean;
-
+ 
+  cout << "[LocalViewMatch::create_template()] templates.size == " << templates.size() << endl;
+	
   return templates.size() - 1;
 }
 
