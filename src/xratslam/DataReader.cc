@@ -101,7 +101,6 @@ DataReader::setStorageDir( string storageDir )
 bool
 DataReader::readNext( Image **image, Odometry **odometry )
 {
-  cout << "HI1" << endl;
   if ( ! _odometryReader )
   {
     cerr <<"DataReader::readNext() - ERROR: OdometryReader not set."
@@ -109,19 +108,16 @@ DataReader::readNext( Image **image, Odometry **odometry )
     return false;
   }
   
-  cout << "HI2" << endl;
   // If data to be read had already been stored, read stored data.
   //
   if ( _counter < _totalRead && ! loadData( image, odometry ) )
   {
-    cout << "HI2.5" << endl;
     return false;
   }
   // Read data from input channel.
   //
   else
   {
-    cout << "HI2.3" << endl;
     if ( ! isOpened() ) {
       return false;
     }
@@ -133,20 +129,18 @@ DataReader::readNext( Image **image, Odometry **odometry )
     // indicates what image should be read.
     //
 
-    cout << "HI3" << endl;
+    cout << "HI :(" << endl;
     
     *odometry = 0;
-    cout << "HI3.166667" << endl;
     *image    = 0;
     
-    cout << "HI3.33" << endl;
+    cout << "HI :)" << endl;
     
     try
     {
       // Read image before odometry.
       if ( _isVisual )
       {
-        cout << "HI4" << endl;
         if ( ! (*image = readNextImage( _imageSeq++ )) )
           throw string( "image ERROR-1" );
         if ( ! (*odometry = _odometryReader->getNext( *image )) )
@@ -155,7 +149,6 @@ DataReader::readNext( Image **image, Odometry **odometry )
       // Read odometry before image.
       else
       {
-        cout << "HI4.5" << endl;
         if ( ! (*odometry = _odometryReader->getNext()) )
           throw string( "odometry ERROR-2" );
         if ( ! (*image = readNextImage( (*odometry)->seq )) )
@@ -167,8 +160,6 @@ DataReader::readNext( Image **image, Odometry **odometry )
       if ( *image    ) delete *image   ; *image    = 0;
       return false;
     }
-    
-    cout << "HI5" << endl;
     
     // Debug: all read data is saved in a storage inner directory.
     // This must be controled by library users!
