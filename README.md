@@ -86,5 +86,5 @@ David Ball  (david.ball@qut.edu.au) and
 Scott Heath (scott.heath@uqconnect.edu.au)
 will be used.
 
-Can shorten the long st.lucia test mp4 down to the first 10 minutes:
-ffmpeg -ss 00:00:00 -to 00:10:00 -i test.mp4 -c copy short.mp4
+Can shorten the long st.lucia test mp4 down to the first 10 minutes:  
+> ffmpeg -ss 00:00:00 -to 00:10:00 -i test.mp4 -c copy short.mp4
