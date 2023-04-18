@@ -113,14 +113,18 @@ DataReader::readNext( Image **image, Odometry **odometry )
   // If data to be read had already been stored, read stored data.
   //
   if ( _counter < _totalRead && ! loadData( image, odometry ) )
+  {
+    cout << "HI2.5" << endl;
     return false;
-
+  }
   // Read data from input channel.
   //
   else
   {
-    if ( ! isOpened() )
+    cout << "HI2.3" << endl;
+    if ( ! isOpened() ) {
       return false;
+    }
 
     // When visual odometry is used images are used to find odometry.
     // Thus, images should be read before odometry creation.
@@ -129,10 +133,10 @@ DataReader::readNext( Image **image, Odometry **odometry )
     // indicates what image should be read.
     //
 
+    cout << "HI3" << endl;
+    
     *odometry = 0;
     *image    = 0;
-
-    cout << "HI3" << endl;
     
     try
     {
