@@ -343,8 +343,6 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
 
   int offset;
   double epsilon = 0.005;
-
-  cout << "templates.size(): " << templates.size() << endl;
 	
   BOOST_FOREACH(vt, templates) {
       if (abs(current_mean - vt.mean) > VT_MATCH_THRESHOLD + epsilon) {
