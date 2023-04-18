@@ -75,8 +75,10 @@ DataReaderVideo::readNextImage( int )
 
   cv::Mat frame;
   *_videoCapture >> frame;
-  if ( frame.empty() )
+  if (frame.empty()) {
+    cout << "end of video!" << endl;
     return 0;
+  }
 
   int  width  = frame.cols;
   int  height = frame.rows;
