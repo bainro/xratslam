@@ -16,9 +16,9 @@ int main()
     DataReaderVideo vid("./test.mp4");
     vid.setOdometryVisual(NULL);
     
-    Image img;
-    Odometry odo;
-    vid.readNext(&img, &odo);
-    cout << slam.feed(&img, &odo);
+    Image **img;
+    Odometry **odo;
+    vid.readNext(img, odo);
+    cout << slam.feed(img, odo);
     return 0;
 }
