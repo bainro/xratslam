@@ -363,7 +363,7 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id)
   int offset;
   double epsilon = 0.005;
 
-  cout << typeid(templates).name() << endl;
+  cout << "templates.size(): " << templates.size() << endl;
 	
   if (VT_PANORAMIC)
   {
