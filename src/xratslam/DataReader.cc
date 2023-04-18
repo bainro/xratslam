@@ -101,6 +101,7 @@ DataReader::setStorageDir( string storageDir )
 bool
 DataReader::readNext( Image **image, Odometry **odometry )
 {
+  cout << "HI" << endl;
   if ( ! _odometryReader )
   {
     cerr <<"DataReader::readNext() - ERROR: OdometryReader not set."
