@@ -108,6 +108,8 @@ void LocalViewMatch::on_image( const unsigned char *view_rgb,
   unsigned int vt_match_id;
   compare(vt_error, vt_match_id);
 
+  cout << vt_error << endl;
+	
   if (vt_error <= VT_MATCH_THRESHOLD)
   {
     set_current_vt((int)vt_match_id);
