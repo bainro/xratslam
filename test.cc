@@ -18,6 +18,9 @@ int main()
     Image *img;
     Odometry *odo;
     vid.readNext(&img, &odo);
-    cout << slam.feed(img, odo);
+    while (&img != 0) {
+        cout << slam.feed(img, odo);
+        vid.readNext(&img, &odo);
+    }
     return 0;
 }
