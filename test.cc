@@ -20,15 +20,17 @@ int main()
     Odometry *odo;
     vid.readNext(&img, &odo);
     int count = 0;
-    while (img != 0) {
+    while (true) {
         slam.feed(img, odo);
-        count++;
         vid.readNext(&img, &odo);
+        
+        count++;
         if (count%100 == 0) {
             cout << "Frame #" << count << " done!" << endl;
             Image *img_copy(img);
             (*img_copy).show("OpenCV window", 10);
         }    
+        if (img == 0) break;
     }
     cout << "FINISHED!" << endl;
     return 0;
