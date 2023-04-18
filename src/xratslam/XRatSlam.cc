@@ -252,8 +252,6 @@ XRatSlam::feed( Image *image, Odometry *odometry )
     delete odometry;
     return false;
   }
-
-  cout << _moduleLV->getSize() << endl;
   
   _queueImageLV   ->push( image    );
   _queueOdometryPC->push( new Odometry( *odometry ) );
@@ -515,6 +513,7 @@ XRatSlam::stopLog( TimeLogger *logger )
 bool
 XRatSlam::saveInfo( string dir )
 {
+  /*
   // Get LocalView number of elements.
   _mutexLV.lock();
   int sizeLV = _moduleLV->getSize();
@@ -524,6 +523,7 @@ XRatSlam::saveInfo( string dir )
   _mutexEM.lock();
   int sizeEM = _moduleEM->getSize();
   _mutexEM.unlock();
+  */
 
   // Open output file.
   ofstream file{ dir + "info.txt" };
