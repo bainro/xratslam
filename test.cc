@@ -26,6 +26,7 @@ int main()
         count++;
         if (count%100 == 0) {
             cout << "Frame #" << count << " done!" << endl;
+            (*img).show("OpenCV window", 10);
         }    
     }
     cout << "FINISHED!" << endl;
