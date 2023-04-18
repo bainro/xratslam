@@ -26,7 +26,7 @@ int main()
         if (count%100 == 0) {
             cout << "Frame #" << count << " done!" << endl;
             Image *img_copy(img);
-            (*img_copy).show("OpenCV window", 10);
+            (*img_copy).show("OpenCV window", 100);
         }    
         vid.readNext(&img, &odo);
     }
