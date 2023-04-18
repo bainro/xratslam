@@ -136,6 +136,7 @@ DataReader::readNext( Image **image, Odometry **odometry )
     cout << "HI3" << endl;
     
     *odometry = 0;
+    cout << "HI3.166667" << endl;
     *image    = 0;
     
     cout << "HI3.33" << endl;
