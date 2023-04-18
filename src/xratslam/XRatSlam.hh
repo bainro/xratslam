@@ -131,7 +131,7 @@ namespace xratslam
 
     /** Save extra information to 'info.txt' file.
      */
-    bool saveInfo( std::string dir );
+    // bool saveInfo( std::string dir );
 
     // Save modules state.
     // 'it' is the iteration (related time step).
