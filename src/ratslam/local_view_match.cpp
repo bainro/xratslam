@@ -107,8 +107,6 @@ void LocalViewMatch::on_image( const unsigned char *view_rgb,
   prev_vt = get_current_vt();
   unsigned int vt_match_id;
   compare(vt_error, vt_match_id);
-
-  cout << vt_match_id << endl;
 	
   if (vt_error <= VT_MATCH_THRESHOLD)
   {
@@ -365,6 +363,8 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id)
   int offset;
   double epsilon = 0.005;
 
+  cout << typeid(templates).name() << endl;
+	
   if (VT_PANORAMIC)
   {
 
