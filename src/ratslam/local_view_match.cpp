@@ -405,17 +405,18 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
 
 	  vt_error = vt_err;
 
-  } else {
+  } 
+  else {
       BOOST_FOREACH(vt, templates) {
 	      if (abs(current_mean - vt.mean) > VT_MATCH_THRESHOLD + epsilon) {
 	          cout << "dbg" << endl;
 	          continue;
 	      }
 
-		  // for each vt try matching the view at different offsets
-		  // try to fast break based on error already great than previous errors
-		  // handles 2d images shifting only in the x direction
-		  // note I haven't tested on a 1d yet.
+	      // for each vt try matching the view at different offsets
+          // try to fast break based on error already great than previous errors
+          // handles 2d images shifting only in the x direction
+          // note I haven't tested on a 1d yet.
 	      for (offset = 0; offset < VT_SHIFT_MATCH*2+1; offset += VT_STEP_MATCH) {
 	          cout << "offset: " << offset << endl;
 	          cdiff = 0;
