@@ -28,5 +28,6 @@ int main()
             cout << "Frame #" << count << " done!" << endl;
         }    
     }
+    cout << "FINISHED!" << endl;
     return 0;
 }
