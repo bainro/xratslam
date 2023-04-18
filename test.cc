@@ -14,7 +14,7 @@ int main()
     XRatSlam slam(configFile);
     cout << slam.start() << endl;
     DataReaderVideo vid("./test.mp4");
-    vid.setOdometryVisual(NULL);
+    vid.setOdometryVisual(configFile);
     
     Image **img;
     Odometry **odo;
