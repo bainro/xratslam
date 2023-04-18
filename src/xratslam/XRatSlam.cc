@@ -507,13 +507,10 @@ XRatSlam::stopLog( TimeLogger *logger )
   }
 }
 
-
-/*****************/
-/*** save Info ***/
+/*
 bool
 XRatSlam::saveInfo( string dir )
 {
-  /*
   // Get LocalView number of elements.
   _mutexLV.lock();
   int sizeLV = _moduleLV->getSize();
@@ -523,7 +520,7 @@ XRatSlam::saveInfo( string dir )
   _mutexEM.lock();
   int sizeEM = _moduleEM->getSize();
   _mutexEM.unlock();
-  */
+  
 
   // Open output file.
   ofstream file{ dir + "info.txt" };
@@ -539,7 +536,7 @@ XRatSlam::saveInfo( string dir )
 
   return true;
 }
-
+*/
 
 /*********************/
 /*** save State LV ***/
