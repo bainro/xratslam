@@ -253,6 +253,8 @@ XRatSlam::feed( Image *image, Odometry *odometry )
     return false;
   }
 
+  cout << _moduleLV->getSize() << endl;
+  
   _queueImageLV   ->push( image    );
   _queueOdometryPC->push( new Odometry( *odometry ) );
   _queueOdometryEM->push( odometry );
