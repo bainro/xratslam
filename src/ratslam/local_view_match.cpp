@@ -387,6 +387,6 @@ void LocalViewMatch::compare(double &vt_err, unsigned int &vt_match_id) {
   vt_match_id = min_template;
   vt_error = vt_err;
 
-  } // compare
+} // end compare()
 
-} // namespace
+} // end namespace
