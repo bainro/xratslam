@@ -18,9 +18,14 @@ int main()
     Image *img;
     Odometry *odo;
     vid.readNext(&img, &odo);
+    int count = 0;
     while (&img != 0) {
         cout << slam.feed(img, odo);
         vid.readNext(&img, &odo);
+        count++;
+        if (count%100 == 0) {
+            cout << "Frame #" << count << " done!" << endl;
+        }    
     }
     return 0;
 }
