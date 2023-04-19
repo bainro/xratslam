@@ -25,11 +25,13 @@ int main()
         if (img == 0) break;
         
         count++;
-        if (count%1000 == 0) {
+        if (count%200 == 0) {
             cout << "Frame #" << count << " done!" << endl;
             // Image *img_copy(img);
             // (*img_copy).show("OpenCV window", 10);
-            cout << "odometry time: " << odo->dTime << endl;
+            //cout << "odometry time: " << odo->dTime << endl;
+            cout << "odometry's vPos: " << odo->dPos << endl;
+            cout << "odometry's vAng: " << odo->dAng << endl;
             (*img).show("OpenCV window", 10);
         }    
     }
