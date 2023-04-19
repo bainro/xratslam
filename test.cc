@@ -29,7 +29,7 @@ int main()
             cout << "Frame #" << count << " done!" << endl;
             // Image *img_copy(img);
             // (*img_copy).show("OpenCV window", 10);
-            cout << "odometry time: " << (&odo).dTime << endl;
+            cout << "odometry time: " << odo.dTime << endl;
             (*img).show("OpenCV window", 10);
         }    
     }
