@@ -95,19 +95,21 @@ void VisualOdometry::on_image( const unsigned char * data,
     first = false;
   }
 
-  convert_view_to_view_template( &vtrans_profile[0], data, greyscale,
-                                 VTRANS_IMAGE_X_MIN, VTRANS_IMAGE_X_MAX,
-                                 VTRANS_IMAGE_Y_MIN, VTRANS_IMAGE_Y_MAX);
+  convert_view_to_view_template(&vtrans_profile[0], data, greyscale,
+                                VTRANS_IMAGE_X_MIN, VTRANS_IMAGE_X_MAX,
+                                VTRANS_IMAGE_Y_MIN, VTRANS_IMAGE_Y_MAX);
 
-  visual_odo( &vtrans_profile[0], vtrans_profile.size(),
-              &vtrans_prev_profile[0], vtrans_ms, &dummy );
+  visual_odo(&vtrans_profile[0], vtrans_profile.size(),
+             &vtrans_prev_profile[0], vtrans_ms, &dummy);
 
-  convert_view_to_view_template( &vrot_profile[0], data, greyscale,
-                                 VROT_IMAGE_X_MIN, VROT_IMAGE_X_MAX,
-                                 VROT_IMAGE_Y_MIN, VROT_IMAGE_Y_MAX );
+  convert_view_to_view_template(&vrot_profile[0], data, greyscale,
+                                VROT_IMAGE_X_MIN, VROT_IMAGE_X_MAX,
+                                VROT_IMAGE_Y_MIN, VROT_IMAGE_Y_MAX);
 
-  visual_odo( &vrot_profile[0], vrot_profile.size(),
-              &vrot_prev_profile[0], &dummy, vrot_rads );
+  visual_odo(&vrot_profile[0], vrot_profile.size(),
+             &vrot_prev_profile[0], &dummy, vrot_rads);
+  
+  cout << *vrot_rads << " " << *vtrans_ms << endl;
 }
 
 void VisualOdometry::visual_odo( double *data, unsigned short width,
