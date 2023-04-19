@@ -112,6 +112,7 @@ DataReader::readNext( Image **image, Odometry **odometry )
   //
   if ( _counter < _totalRead && ! loadData( image, odometry ) )
   {
+    cout << "WAT?" << endl;
     return false;
   }
   // Read data from input channel.
