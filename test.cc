@@ -30,8 +30,8 @@ int main()
             // Image *img_copy(img);
             // (*img_copy).show("OpenCV window", 10);
             //cout << "odometry time: " << odo->dTime << endl;
-            cout << "odometry's vPos: " << odo->vPos << endl;
-            cout << "odometry's vAng: " << odo->vAng << endl;
+            cout << "odometry's dPos: " << odo->dPosition << endl;
+            cout << "odometry's dAng: " << odo->dAngle << endl;
             (*img).show("OpenCV window", 10);
         }    
     }
